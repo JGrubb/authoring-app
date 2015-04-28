@@ -1,0 +1,26 @@
+<div class="row">
+  <%= form_for @story do |f| %>
+  <div class="six columns">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "u-full-width" %>
+  </div>
+  <div class="eight columns">
+    <%= f.label :summary %>
+    <%= f.text_area :summary, class: "u-full-width" %>
+  </div>
+  
+  <div class="eight columns">
+    <%= f.label :body %>
+    <%= f.nested_fields_for :resources do |ff| %>
+      <%= ff.text_area :body, class: "u-full-width" %>
+    <% end %>
+    <%= f.add_nested_fields_link :resources %>
+  </div>
+  
+  <div class="twelve columns">
+    <%= f.submit "Submit" %>
+  </div>
+  
+
+  <% end %>
+</div>

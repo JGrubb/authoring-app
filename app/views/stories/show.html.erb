@@ -1,0 +1,9 @@
+Hello <%= @story.title %>
+
+<% @story.resources.each do |resource| %>
+<div class="resource">
+  <%= resource.body %>
+</div>
+<% end %>
+
+<%= link_to "edit", edit_story_path %>
