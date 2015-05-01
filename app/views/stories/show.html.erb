@@ -2,7 +2,7 @@ Hello <%= @story.title %>
 
 <% @story.resources.each do |resource| %>
 <div class="resource">
-  <%= resource.body %>
+  <%= simple_format resource.body %>
 </div>
 <% end %>
 

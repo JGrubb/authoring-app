@@ -9,10 +9,11 @@
     <%= f.text_area :summary, class: "u-full-width" %>
   </div>
   
-  <div class="eight columns">
+  <div class="ten columns">
     <%= f.label :body %>
     <%= f.nested_fields_for :resources do |ff| %>
       <%= ff.text_area :body, class: "u-full-width" %>
+      <%= ff.remove_nested_fields_link %>
     <% end %>
     <%= f.add_nested_fields_link :resources %>
   </div>

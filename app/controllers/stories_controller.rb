@@ -12,7 +12,7 @@ class StoriesController < ApplicationController
   end
   
   def show
-    @story = Story.find params[:id]
+    @story = Story.find(params[:id])
   end
 
   def edit
@@ -33,7 +33,7 @@ class StoriesController < ApplicationController
   private
   
   def story_params
-    params.require(:story).permit(:title, :summary, :resources_attributes => [:body, :type])
+    params.require(:story).permit(:title, :summary, :resources_attributes => [:body, :type, :_destroy, :id])
   end
   
 end

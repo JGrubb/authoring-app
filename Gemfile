@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'acts_as_list'
 gem 'nested_form_fields'
+gem 'carrierwave'
 
 
 # Use ActiveModel has_secure_password
